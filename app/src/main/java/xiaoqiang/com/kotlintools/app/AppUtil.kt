@@ -11,7 +11,7 @@ import android.content.ContextWrapper
 class AppUtil {
 
     /**
-     * 获取App版本名
+     * get App version name
      */
     fun getVersionName(context: Context): String = try {
         val packageManager = context.packageManager
@@ -24,7 +24,7 @@ class AppUtil {
 
     companion object {
         /**
-         * 通过context获取其对应的Activty
+         * 通过context获取其对应的Activity
          */
         fun getActivityContext(context: Context): Activity? {
             var activityContext = context

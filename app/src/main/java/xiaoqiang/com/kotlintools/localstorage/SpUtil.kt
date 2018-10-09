@@ -24,7 +24,7 @@ object SpUtil {
     }
 
     /**
-     * 保存数据
+     * save data
      */
     fun <T> put(key: String, value: T){
         when(value){
@@ -37,7 +37,7 @@ object SpUtil {
     }
 
     /**
-     * 取数据
+     * get data
      */
     @Suppress("IMPLICIT_CAST_TO_ANY","UNCHECKED_CAST")
     fun <T> get(key: String, default: T): T {
