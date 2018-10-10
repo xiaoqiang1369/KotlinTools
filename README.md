@@ -1,5 +1,5 @@
 # KotlinTools
-Tool libraries written in Kotlin
+Kotlin tools written in Kotlin
 
 *There may be bugs in these tools*
 
