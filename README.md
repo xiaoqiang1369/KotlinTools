@@ -12,5 +12,5 @@
 - **app** --------------tools relative to application
 - **color**-------------tools relative to color
 - **download**--------tools relative to file download
-- **localstorage**------tools relative to local storage
-- **permission**-------tools relative to run time permission
+- **localstorage**-----tools relative to local storage
+- **permission**------tools relative to run time permission
