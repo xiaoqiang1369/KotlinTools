@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.ContextWrapper
 
 /**
- *   description: App相关的工具方法类
+ *   description: methods relative to application
  *   created by crx on 2018/8/20 17:26
  */
 class AppUtil {
@@ -24,7 +24,7 @@ class AppUtil {
 
     companion object {
         /**
-         * 通过context获取其对应的Activity
+         * get activity by context
          */
         fun getActivityContext(context: Context): Activity? {
             var activityContext = context

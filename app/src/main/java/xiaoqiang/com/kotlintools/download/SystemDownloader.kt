@@ -12,7 +12,7 @@ import java.io.File
 import java.net.URI
 
 /**
- *   description: Use system DownloadManager to download files by uri
+ *   description: Use system DownloadManager to download a file by its url
  *   created by crx on 2018/10/9 15:43
  */
 class SystemDownloader(private val context: Context, url: String) : LifecycleObserver{

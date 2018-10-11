@@ -9,17 +9,17 @@ import android.support.annotation.DrawableRes
 import android.support.v4.content.ContextCompat
 
 /**
- *   description: 给图片着色的工具
+ *   description: set color for a image or change its original color
+ *   return its drawable
  *   created by crx on 2018/8/22 16:35
  */
 class ImgColorFilter(private val context: Context) {
 
 
     /**
-     * 给图片着色
-     * @param img 要着色的图片，可以传入Drawable格式或其资源id
-     * @param color 颜色
-     * @return 返回Drawable格式的图片
+     * @param img Drawable image or just its resId
+     * @param color color to set to the image
+     * @return Drawable image
      */
     fun <T> filterColor(img: T?, @ColorInt color: Int): Drawable?{
         var drawable: Drawable? = null
@@ -33,10 +33,9 @@ class ImgColorFilter(private val context: Context) {
     }
 
     /**
-     * 给图片着色
-     * @param img 要着色的图片，可以传入Drawable格式或其资源id
-     * @param colorId 颜色资源id
-     * @return 返回Drawable格式的图片
+     * @param img Drawable image or just its resId
+     * @param color color resId
+     * @return Drawable image
      */
     fun <T> filterResColor(img: T?, @ColorRes colorId: Int): Drawable?{
         var drawable: Drawable? = null

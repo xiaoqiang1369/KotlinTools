@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 
 /**
- *   description: can be used directly in the project
+ *   description: a SharedPreferences tool which can be used directly in a project
  *   created by crx on 2018/8/22 15:10
  */
 object SpUtil {
