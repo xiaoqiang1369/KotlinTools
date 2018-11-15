@@ -27,7 +27,6 @@ class ImgColorFilter(private val context: Context) {
             is Drawable -> drawable = img
             is Int -> drawable = getImgDrawable(img)
         }
-
         drawable?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
         return drawable
     }
@@ -43,7 +42,6 @@ class ImgColorFilter(private val context: Context) {
             is Drawable -> drawable = img
             is Int -> drawable = getImgDrawable(img)
         }
-
         drawable?.setColorFilter(getColor(colorId), PorterDuff.Mode.SRC_ATOP)
         return drawable
     }
