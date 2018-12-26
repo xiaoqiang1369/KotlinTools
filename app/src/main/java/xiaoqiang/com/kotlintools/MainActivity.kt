@@ -10,5 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         ImgColorFilter(this).filterResColor(R.mipmap.ic_launcher, android.R.color.holo_blue_bright)
+
     }
 }

@@ -1,7 +1,10 @@
 package xiaoqiang.com.kotlintools.extensions
 
 import android.content.Context
+import android.support.annotation.LayoutRes
 import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 
 /**
  *   description: get Context's LayoutInflater
@@ -9,3 +12,7 @@ import android.view.LayoutInflater
  */
 
 val Context.layoutInflater: LayoutInflater get() = LayoutInflater.from(this)
+
+fun Context.inflate(@LayoutRes resource: Int, root: ViewGroup?, attachToRoot: Boolean = false): View {
+    return LayoutInflater.from(this).inflate(resource, root, attachToRoot)
+}
