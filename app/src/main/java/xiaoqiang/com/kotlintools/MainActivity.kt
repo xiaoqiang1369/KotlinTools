@@ -13,6 +13,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import xiaoqiang.com.kotlintools.app.dpToPxR
 import xiaoqiang.com.kotlintools.color.ImgColorFilter
+import xiaoqiang.com.kotlintools.image.loadImage
 import xiaoqiang.com.kotlintools.view.BounceBackViewPager
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         mViewPager = findViewById(R.id.view_pager)
         mViewPager.apply {
             adapter = ViewPagerAdapter()
+            offscreenPageLimit = 4
         }
     }
 
@@ -44,8 +46,8 @@ class MainActivity : AppCompatActivity() {
                 id = R.id.id_test
                 background = ContextCompat.getDrawable(context, R.color.colorPrimary)
                 layoutParams = ViewGroup.LayoutParams(MATCH_PARENT, WRAP_CONTENT)
-                setImageResource(R.mipmap.ic_launcher)
             }
+            loadImage(container.context, imageView, "https://wx2.sinaimg.cn/mw690/60d7cbf8gy1g0rybfdtprj20j10hy7qx.jpg")
             container.addView(imageView)
             return imageView
         }
