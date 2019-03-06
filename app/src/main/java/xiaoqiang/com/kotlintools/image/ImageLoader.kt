@@ -6,7 +6,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 
 /**
- *   description: image loader
+ *   description: used to load images from network
  *   created by crx on 2019/3/5 15:54
  */
 
