@@ -81,10 +81,7 @@ object RTPermission {
      * Check if the user denied a permission and checked "Don't ask again"
      */
     fun checkedNotAskAgain(activity: Activity, permission: String): Boolean{
-        return if(!ActivityCompat.shouldShowRequestPermissionRationale(activity, permission))
-            true
-        else
-            return false
+        return !ActivityCompat.shouldShowRequestPermissionRationale(activity, permission)
     }
 
 }

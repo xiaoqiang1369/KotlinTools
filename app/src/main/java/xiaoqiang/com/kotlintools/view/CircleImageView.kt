@@ -36,9 +36,10 @@ class CircleImageView @JvmOverloads constructor(
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         //长和宽一致
-        val min = Math.min(widthMeasureSpec, heightMeasureSpec)
-        super.onMeasure(min, min)
+        val minLength = Math.min(measuredWidth, measuredHeight)
+        setMeasuredDimension(minLength, minLength)
     }
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {

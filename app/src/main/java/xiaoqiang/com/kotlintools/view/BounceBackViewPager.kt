@@ -10,7 +10,7 @@ import android.view.View
 
 /**
  * 有边界滑动回弹效果的ViewPager
- * created by chenrenxiang on 2018/7/19 15:40
+ * created by chenrenxiang on 2018/12/19 15:40
  */
 class BounceBackViewPager @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null)
     : ViewPager(context, attrs) {
