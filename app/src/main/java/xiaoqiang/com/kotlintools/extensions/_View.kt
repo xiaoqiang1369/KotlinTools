@@ -12,7 +12,7 @@ import android.view.ViewGroup
  */
 
 /**
- * set Corner radius, use default background color
+ * set corner radius, use default background color
  */
 fun View.setCorner(radius: Float) {
     val gd = GradientDrawable()
@@ -25,7 +25,7 @@ fun View.setCorner(radius: Float) {
 }
 
 /**
- * set Corner radius and background color
+ * set corner radius and background color
  */
 fun View.setCorner(@ColorInt bgColor: Int, radius: Float){
     val gd = GradientDrawable()
@@ -48,7 +48,7 @@ fun View.setStroke(@ColorInt color: Int, strokeWidth: Int) {
 }
 
 /**
- * set stroke(color, width) & corner radius(radius, background color)
+ * set stroke(color, width) & corner radius & background color
  */
 fun View.setStroke(@ColorInt strokeColor: Int, strokeWidth: Int, @ColorInt bgColor: Int, radius: Float = 0f) {
     val gd = GradientDrawable()
