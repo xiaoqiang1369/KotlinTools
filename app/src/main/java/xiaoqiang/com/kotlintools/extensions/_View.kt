@@ -11,6 +11,9 @@ import android.view.ViewGroup
  * description: set corner and stroke for View
  */
 
+/**
+ * set Corner radius, use default background color
+ */
 fun View.setCorner(radius: Float) {
     val gd = GradientDrawable()
     val bgColor = if (background is ColorDrawable) (background as ColorDrawable).color else 0
@@ -21,6 +24,9 @@ fun View.setCorner(radius: Float) {
     background = gd
 }
 
+/**
+ * set Corner radius and background color
+ */
 fun View.setCorner(@ColorInt bgColor: Int, radius: Float){
     val gd = GradientDrawable()
     gd.setColor(bgColor)
@@ -28,6 +34,9 @@ fun View.setCorner(@ColorInt bgColor: Int, radius: Float){
     background = gd
 }
 
+/**
+ * set just stroke(color&width)
+ */
 fun View.setStroke(@ColorInt color: Int, strokeWidth: Int) {
     val gd = GradientDrawable()
     val bgColor = if (background is ColorDrawable) (background as ColorDrawable).color else 0
@@ -38,6 +47,9 @@ fun View.setStroke(@ColorInt color: Int, strokeWidth: Int) {
     background = gd;
 }
 
+/**
+ * set stroke(color, width) & corner radius(radius, background color)
+ */
 fun View.setStroke(@ColorInt strokeColor: Int, strokeWidth: Int, @ColorInt bgColor: Int, radius: Float = 0f) {
     val gd = GradientDrawable()
     gd.setColor(bgColor)
