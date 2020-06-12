@@ -1,10 +1,10 @@
 package xiaoqiang.com.kotlintools
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
-import android.support.v4.content.ContextCompat
-import android.support.v4.view.PagerAdapter
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
+import androidx.viewpager.widget.PagerAdapter
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
@@ -13,6 +13,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import xiaoqiang.com.kotlintools.app.dpToPxR
 import xiaoqiang.com.kotlintools.color.ImgColorFilter
+import xiaoqiang.com.kotlintools.extensions.getViewModel
 import xiaoqiang.com.kotlintools.image.loadImage
 import xiaoqiang.com.kotlintools.view.BounceBackViewPager
 

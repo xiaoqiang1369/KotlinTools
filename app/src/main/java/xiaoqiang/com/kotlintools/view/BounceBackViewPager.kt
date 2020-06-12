@@ -3,7 +3,7 @@ package xiaoqiang.com.kotlintools.view
 import android.animation.Animator
 import android.animation.ValueAnimator
 import android.content.Context
-import android.support.v4.view.ViewPager
+import androidx.viewpager.widget.ViewPager
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
