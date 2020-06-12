@@ -8,7 +8,7 @@ import android.view.ViewGroup
 
 /**
  * created by crx in 2020/5/18 11:51
- * description: set corner and stroke for View
+ * description: extension functions of class View
  */
 
 /**

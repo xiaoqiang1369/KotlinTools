@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 /**
- *   description: get Context's LayoutInflater
+ *   description: extension functions&fields of Context
  *   created by crx on 2018/12/10 11:42
  */
 
