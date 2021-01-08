@@ -3,8 +3,8 @@ import java.util.concurrent.Executors
 private val IO_EXECUTOR = Executors.newSingleThreadExecutor()
 
 /**
- * Utility method to run blocks on a dedicated background thread, used for io/database work.
+ * Utility method to run blocks on a dedicated background thread.
  */
-fun runOnIoThread(f: () -> Unit) {
+fun runOnNewThread(f: () -> Unit) {
     IO_EXECUTOR.execute(f)
 }

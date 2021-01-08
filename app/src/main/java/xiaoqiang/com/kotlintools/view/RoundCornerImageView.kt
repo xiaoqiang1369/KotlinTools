@@ -5,6 +5,7 @@ import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
 import android.util.AttributeSet
 import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatImageView
 import xiaoqiang.com.kotlintools.R
 
 /**
@@ -15,7 +16,7 @@ class RoundCornerImageView @JvmOverloads constructor(
     context: Context,
     attributeSet: AttributeSet? = null,
     styleRes: Int = 0
-) : ImageView(context, attributeSet, styleRes){
+) : AppCompatImageView(context, attributeSet, styleRes){
 
     private var mRadius: Float
     private val mRectF: RectF = RectF()

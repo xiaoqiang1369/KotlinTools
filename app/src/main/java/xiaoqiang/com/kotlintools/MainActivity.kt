@@ -1,20 +1,17 @@
 package xiaoqiang.com.kotlintools
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
-import androidx.viewpager.widget.PagerAdapter
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
-import android.widget.LinearLayout
-import xiaoqiang.com.kotlintools.app.dpToPxR
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.viewpager.widget.PagerAdapter
+import runOnNewThread
 import xiaoqiang.com.kotlintools.color.ImgColorFilter
-import xiaoqiang.com.kotlintools.extensions.getViewModel
-import xiaoqiang.com.kotlintools.image.loadImage
+import xiaoqiang.com.kotlintools.extensions.loadUrlImage
 import xiaoqiang.com.kotlintools.view.BounceBackViewPager
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +28,15 @@ class MainActivity : AppCompatActivity() {
             adapter = ViewPagerAdapter()
             offscreenPageLimit = 4
         }
+
+        runOnNewThread{
+            val result = 1
+            runOnUiThread {
+
+            }
+        }
+
+        runOnUiThread {  }
     }
 
     class ViewPagerAdapter : PagerAdapter(){
@@ -48,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 background = ContextCompat.getDrawable(context, R.color.colorPrimary)
                 layoutParams = ViewGroup.LayoutParams(MATCH_PARENT, WRAP_CONTENT)
             }
-            loadImage(container.context, imageView, "https://wx2.sinaimg.cn/mw690/60d7cbf8gy1g0rybfdtprj20j10hy7qx.jpg")
+            imageView.loadUrlImage("https://wx2.sinaimg.cn/mw690/60d7cbf8gy1g0rybfdtprj20j10hy7qx.jpg")
             container.addView(imageView)
             return imageView
         }

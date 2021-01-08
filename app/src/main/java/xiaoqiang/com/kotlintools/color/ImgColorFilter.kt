@@ -2,6 +2,7 @@ package xiaoqiang.com.kotlintools.color
 
 import android.content.Context
 import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
 import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
@@ -27,7 +28,7 @@ class ImgColorFilter(private val context: Context) {
             is Drawable -> drawable = img
             is Int -> drawable = getImgDrawable(img)
         }
-        drawable?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+        drawable?.colorFilter = PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP)
         return drawable
     }
 
@@ -42,7 +43,7 @@ class ImgColorFilter(private val context: Context) {
             is Drawable -> drawable = img
             is Int -> drawable = getImgDrawable(img)
         }
-        drawable?.setColorFilter(getColor(colorId), PorterDuff.Mode.SRC_ATOP)
+        drawable?.colorFilter = PorterDuffColorFilter(getColor(colorId), PorterDuff.Mode.SRC_ATOP)
         return drawable
     }
 
