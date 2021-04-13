@@ -73,7 +73,8 @@ public class URLConnectionDownloader(private val url: String){
         // input stream to read file - with 8k buffer
         val input = BufferedInputStream(urlConnection.inputStream, 8 * 1024)
         //output stream to write file
-        val output = FileOutputStream(filePath + File.separator + fileName)
+        val fullPath = filePath + File.separator + fileName
+        val output = FileOutputStream(fullPath)
         val data = ByteArray(1024)
         var totalReadSize = 0L
         var count: Int
@@ -96,7 +97,7 @@ public class URLConnectionDownloader(private val url: String){
         if(!downloadFlag && totalReadSize < fileLength){
             downloadListener?.onDownloadCanceled()
         }else{
-            downloadListener?.onDownloadComplete(filePath)
+            downloadListener?.onDownloadComplete(fullPath)
         }
 
 
